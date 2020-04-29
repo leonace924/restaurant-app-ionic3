@@ -1,0 +1,130 @@
+<!-- <ion-content>
+   
+
+  <div class="big-picture-container">
+    <ion-buttons left>
+      <button icon-only (click)="goBack()" class="profile-back-button">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </div>
+ 
+  <div class="info-container">
+    <ion-avatar class="avatar-container">
+      <img src="../../assets/imgs/avatar.jpeg" class="profile-avatar">
+    </ion-avatar>
+
+    <form class="list-form profile-fields auth-profile"  [formGroup]="DataProfile" (ngSubmit)="Profile()">
+      <ion-item class="profile-item">
+        <ion-label floating>
+          <ion-icon name="person" item-start class="text"></ion-icon>
+          {{ "First_Name" | translation: language }}
+        </ion-label>
+        <ion-input formControlName="firstName" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item class="profile-item">
+        <ion-label floating>
+          <ion-icon name="person" item-start class="text"></ion-icon>
+          {{ "last_name" | translation: language }}
+        </ion-label>
+        <ion-input formControlName="lastName"  type="text"></ion-input>
+      </ion-item>
+
+      <ion-item class="profile-item">
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text"></ion-icon>
+          {{ "username" | translation: language }}
+        </ion-label>
+        <ion-input formControlName="userName" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item class="profile-item">
+        <ion-label floating>
+          <ion-icon name="star" item-start class="text"></ion-icon>
+          Assessment
+        </ion-label>
+        <ion-input formControlName="assessment" type="text"></ion-input>
+      </ion-item>
+    </form>
+
+    <div class="button-profile" text-center>
+      <button ion-button icon-start (click)="Profile()" [disabled]="!DataProfile.valid">
+          <ion-icon name="log-in"></ion-icon>
+        SAVE CHANGES
+      </button>
+    </div>
+
+  </div>
+</ion-content>
+ -->
+<ion-content padding class="animated fadeIn login auth-profile">
+ 
+  <div class="login-content">
+      <div class="big-picture-container">
+          <ion-buttons left>
+            <button icon-only (click)="goBack()" class="profile-back-button">
+              <ion-icon name="arrow-back"></ion-icon>
+            </button>
+          </ion-buttons>
+        </div>
+    <div class="centro-forms" text-center>
+      <ion-avatar class="avatar-container" (click)="openGallery()">
+        <img [src]="userImage" class="profile-avatar">
+      </ion-avatar>
+    </div>
+
+
+    <!-- Login form -->
+    <form class="list-form" [formGroup]="DataProfile" (ngSubmit)="Profile()">
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text"></ion-icon>
+          {{ "Email" | translation: language }}
+        </ion-label>
+        <ion-input formControlName="email" type="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text"></ion-icon>
+          {{ "First_Name" | translation: language }}
+        </ion-label>
+        <ion-input formControlName="firstName" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="lock" item-start class="text"></ion-icon>
+          {{ "last_name" | translation: language }}
+        </ion-label>
+        <ion-input formControlName="lastName" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="lock" item-start class="text"></ion-icon>
+          {{ "username" | translation: language }}
+        </ion-label>
+        <ion-input formControlName="userName" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="lock" item-start class="text"></ion-icon>
+          Phone Number
+        </ion-label>
+        <ion-input formControlName="number" type="text"></ion-input>
+      </ion-item>
+
+    </form>
+
+    <div class="button-login">
+      <button ion-button icon-start block class="text" tappable (click)="Profile()">
+        <ion-icon name="log-in"></ion-icon>
+        Actualizar Datos
+      </button>
+    </div>
+
+  </div>
+</ion-content>

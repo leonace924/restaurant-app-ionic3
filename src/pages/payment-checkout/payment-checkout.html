@@ -1,0 +1,16 @@
+<ion-content>
+  <div class="header animated fadeInDown">
+      <button left ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <h3 class="welcome">Gracias por su Compra</h3>
+    <button color="secondary" icon-start ion-button (click)="GoMenu()">
+      <ion-icon name="arrow-round-back"></ion-icon>
+      {{ "Go_back_menu" | translation: language }}
+    </button>
+  </div>
+
+  <div class="circle">
+    <img src="../../assets/imgs/restaurant.jpg">
+  </div>
+</ion-content>

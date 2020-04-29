@@ -1,0 +1,52 @@
+page-home {
+    .image-container{
+        height: 100%;
+      }
+      .imgContainer {
+        height: 50%;
+      }
+    
+      .imgContainer:nth-child(1) {
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 1rem;
+        background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) ), url('../../assets/imgs/user.jpg') no-repeat;background-size: 50% 100%;
+        background-color: #2d58d5;
+        background-position: right;
+      }
+      .imgContainer:nth-child(2) {
+        display:flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 1rem;
+        background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) ), url('../../assets/imgs/menus.jpg') no-repeat;background-size: 50% 100%;
+        background-color: #2d58d5;
+      }
+    
+      .left-arrow, .right-arrow {
+        font-size: 30px;
+        color:white;
+      }
+      .textImage{
+        width: 35vw;
+      }
+
+      .textImage{
+        animation: float 2s ease-in-out infinite;
+	      transition: all 0.4s ease-in-out;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translatey(0px);
+        }
+        50% {
+          transform: translatey(-2px);
+        }
+        100% {
+          transform: translatey(0px);
+        }
+      }
+
+}

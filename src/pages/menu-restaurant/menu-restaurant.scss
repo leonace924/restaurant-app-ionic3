@@ -1,0 +1,71 @@
+page-menu-restaurant {
+  ion-content {
+    background: url("../../assets/imgs/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  /****************************************************
+			LOADING PERSONALIZADO
+			<div class="loader"></div>
+	****************************************************/
+
+  .loader {
+    border-left: 3px solid #f3f3f3;
+    /* Light grey */
+    border-right: 3px solid #f3f3f3;
+    border-top: 3px solid color($colors, primary);
+    border-bottom: 3px solid color($colors, primary);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 2s linear infinite;
+  }
+
+  .contloading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .textloading {
+    text-align: center;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /****************************************************
+		FIN LOADING PERSONALIZADO
+  ****************************************************/
+
+  .warning {
+    color: rgb(233, 237, 58);
+    font-size: 2em;
+  }
+
+  .message-warning {
+    font-size: 1em;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .big-picture-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+      url("../../assets/imgs/logo.jpg") center no-repeat;
+    background-size: cover;
+    height: 180px;
+    width: 100%;
+    position: relative;
+    padding: 10px;
+  }
+}

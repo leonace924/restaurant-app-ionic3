@@ -1,0 +1,60 @@
+<ion-header class="Confirmation_Orders">
+  <button left ion-button icon-only menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title class="title-Confirmation_Orders">{{ "Confirm_Order" | translation: language }}</ion-title>
+</ion-header>
+
+<ion-content>
+    <div text-center class="buttonContainer">
+        <button color="secondary" icon-start ion-button (click)="GoMenu()">
+          <ion-icon name="arrow-round-back"></ion-icon>
+          {{ "Keep_Shopping" | translation: language }}
+        </button>
+        <ng-container *ngIf="loading == 0">
+          <button color="secondary" icon-start ion-button (click)="PayAllOrders(confirmOrder[0])">
+            Pagar todas las ordenes
+          </button>
+        </ng-container>
+      </div>
+  <div *ngIf="loading == 0">
+    <ion-list *ngFor="let order of confirmOrder[0]" class="listContainer">
+        <ion-item (click)="ConfirmOrder(order)" class="OrderItem">
+          <ion-grid class="itemContainer">
+            <ion-row>
+              <ion-col class="icon-confirmation" col-3>
+                {{ order.status | translation: language }}
+              </ion-col>
+              <ion-col col-2 class="f-15">
+                <strong>${{ order.price }}</strong>
+              </ion-col>
+              <ion-col col-4>
+                <h4>Orden #{{order.id}}</h4>
+                <h4><strong>{{order.dish_name}}</strong></h4>
+              </ion-col>
+              <ion-col col-3>
+                <ion-note item-end>x{{ order.quantity }}</ion-note>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+    </ion-list>
+  </div>
+
+    <div class="textloading" *ngIf="loading == 1">
+            Cargando...
+      <div class="contloading">
+        <div class="loader"></div>
+      </div>
+    </div>
+
+    <div *ngIf="loading == 0 && !confirmOrder" text-center>
+      <ion-icon class="iconInfo warning" name="warning"></ion-icon>
+      <h3 class="message-warning" ion-text color="dark">
+        {{ "No_results_at_the_time" | translation: language }}
+      </h3>
+    </div> 
+  </ion-content>
+       
+
+

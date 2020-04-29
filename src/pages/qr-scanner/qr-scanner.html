@@ -1,0 +1,50 @@
+<!--
+  Generated template for the QrScannerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <button left ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ "Scan_your_QR_Code" | translation: language }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="backg">
+
+      <div padding-horizontal text-center>
+        <ion-card class="CardContainer">
+
+            <ion-card-header class="step">
+                {{ "SCAN" | translation: language }}
+            </ion-card-header>
+          
+            <ion-card-content text-left>
+              <p class="step">1.  {{ "Scan_the_QR_code_to_request_a_dish_at_any_of_the_affiliated_restaurants" | translation: language }}</p>
+             
+              <p class="step">2.  {{ "Order_what_you_want" | translation: language }}</p>
+              
+              <p class="step">3. {{ "Display_the_status_of_your_order" | translation: language }}</p>
+            </ion-card-content>
+          
+        </ion-card>
+
+      </div>  
+    </div>
+
+    <div class="scanBtn" (click)="scan()">
+        <p class="textScan">SCAN</p>
+    </div>
+
+    <ion-icon class="arrow animated fadeInDown" ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
+
+    <div class="qr" (click)="scan()">
+
+    </div>
+
+    <div class="yellow__div"></div>
+</ion-content>

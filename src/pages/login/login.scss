@@ -1,0 +1,26 @@
+page-login {
+  
+  .item-md,
+  .text,
+  .auth-page .scroll-content .login-content .list-form ion-item input,
+  .auth-page .scroll-content .login-content .list-form ion-item ion-label {
+      color: #fff;
+  }
+  .item.item-trasparent{
+    background-color: rgba(0, 0, 0, .3);
+    border-color: transparent;
+    color: white;
+    bottom: 10px;
+  }
+  .item-select .label-md{
+    color: #fff;
+  }
+
+  .text {
+    margin-bottom: 10px;
+    padding: 5px;
+    margin-top: 0;
+  }
+    
+
+}

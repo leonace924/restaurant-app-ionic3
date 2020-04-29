@@ -1,0 +1,1 @@
+export { TranslationPipe } from "./translation/translation";

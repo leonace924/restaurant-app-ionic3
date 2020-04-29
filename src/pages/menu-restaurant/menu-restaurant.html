@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Menu
+    </ion-title>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="closeModal()">
+        <ion-icon name="back-arrow"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="big-picture-container"></div>
+  <ion-list class="list-menu">
+    <ion-item *ngIf="loading == 0 && ListMenu" (click)="OpenCategories(ListMenu)">
+      <ion-icon name="ios-list-box-outline" item-start></ion-icon>
+      {{ListMenu.name}}
+    </ion-item>
+  </ion-list>
+
+  <div class="textloading" *ngIf="loading == 1 && !ListMenu">
+    Cargando Lista De Menu...
+    <div class="contloading">
+      <div class="loader"></div>
+    </div>
+  </div>
+
+  <div *ngIf="error == 1 && loading == 0" text-center>
+    <ion-icon class="iconInfo warning" name="warning"></ion-icon>
+    <h3 class="message-warning" ion-text color="dark">
+      Lo sentimos, Ha ocurrido un error al intentar conectarnos con el servidor
+    </h3>
+  </div>
+</ion-content>

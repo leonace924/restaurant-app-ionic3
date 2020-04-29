@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Main Menu
+    </ion-title>
+    <ion-buttons left>
+        <button ion-button icon-only menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item class="menu-item">
+      <ion-icon name="heart"></ion-icon>
+      Favorites History
+    </button> 
+    <button ion-item class="menu-item">
+      <ion-icon name="map"></ion-icon>
+      Map
+    </button> 
+    <button ion-item class="menu-item" (click)="OpenProfilePage()">
+      <ion-icon name="person"></ion-icon>
+      Profile
+    </button> 
+    <button ion-item class="menu-item">
+      <ion-icon name="star"></ion-icon>
+      Promotions
+    </button> 
+  </ion-list>
+</ion-content>
